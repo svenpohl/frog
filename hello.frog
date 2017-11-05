@@ -1,0 +1,39 @@
+//
+// "Hello Frog"  - Example frog code - 04.okt.2017
+//
+
+
+int a;
+int b;  
+int total;
+char buffer[255];
+
+
+//
+// function SUM
+//
+SUM:
+total = a + b
+RETURN;
+
+//
+// function MAIN
+//
+MAIN:
+
+buffer[6] = "F"
+b         = 2
+total     = 0
+
+GOTO SUM
+
+
+EXPORT CLEAR
+EXPORT a
+EXPORT b
+EXPORT total
+EXPORT buffer;
+
+OUT
+EXIT
+

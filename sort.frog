@@ -1,0 +1,56 @@
+//
+// Bubbesort-Demo in frog - Example frog code - 05.nov.2017
+//
+
+float list[6]
+float tmp_value
+int ready
+int i
+int i2
+int max
+
+
+//
+// function main
+//
+MAIN:
+
+// Preset unsort array
+list[0] = 3
+list[1] = 99.88
+list[2] = 2.3
+list[3] = 4
+list[4] = 2
+list[5] = 7
+PRECOMPILED dump list
+
+ready = 0
+
+WHILE ready != 1
+{
+
+  i = 0
+  max = 5
+  ready = 1
+  WHILE i < max
+       {
+       i2 = i + 1
+       IF list[i] > list[i2]
+          {
+          tmp_value = list[i2]
+          list[i2] = list[i]
+          list[i] = tmp_value
+          ready = 0     
+          } // if
+              
+       i = i + 1
+       } // while
+
+} // while
+
+EXPORT list;
+
+OUT
+EXIT
+
+
